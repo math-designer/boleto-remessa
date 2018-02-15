@@ -12,6 +12,7 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
+		"ext-mbstring": "*",
 	    "andersondanilo/cnab_php": "1.3.*"
 	}
 }
