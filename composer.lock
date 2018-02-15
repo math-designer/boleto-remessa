@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebb5787f60ccea91e35b7ebe75e7034c",
+    "content-hash": "4d8282cbaf200d8fa11bf2120098f02e",
     "packages": [
         {
             "name": "andersondanilo/cnab_php",
@@ -157,7 +157,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3.7"
+        "php": ">=5.3.7",
+        "ext-mbstring": "*"
     },
     "platform-dev": []
 }
