@@ -141,4 +141,4 @@ $autoload['model'] = array();
 */
 
 require APPPATH . 'third_party/openboleto/autoloader.php';
-require APPPATH . 'third_party/mpdf-6/vendor/autoload.php';
+require APPPATH . 'third_party/mpdf-6/mpdf.php';
