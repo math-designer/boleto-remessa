@@ -1,0 +1,67 @@
+{
+	"cedente": {
+		"nome": "Edson jose rodrigues da silva",
+		"tipoInscricao": "1",
+		"documento": "004.513.867-28",
+		"endereco": {
+			"logradouro": "av. almirante lucio meira",
+			"numero": "461",
+			"bairro": "varzea",
+			"cep": "25953-002",
+			"uf": "rj",
+			"cidade": "teresopolis"
+		}
+	},
+	"boletos": []
+}
+
+OBS: Dentro da tag 'boletos' adicionar a seguinte estrutura para cada boleto a ser gerado:
+
+{
+	"sacado": {
+		"nome": "Thiago rodrigues",
+		"tipoInscricao": "1",
+		"documento": "139.243.517-08",
+		"endereco": {
+			"logradouro": "lucio meira",
+			"numero": "461",
+			"bairro": "varzea",
+			"cep": "25953-002",
+			"uf": "rj",
+			"cidade": "tereopolis"
+		}
+	},
+	"boleto": {
+		"dataVencimento": "01/12/2017",
+		"valor": "5.00",
+		"sequencial": "1",
+		"agencia": "0807",
+		"carteira": "109",
+		"conta": "20115",
+		"codigoCliente": "",
+		"numeroDocumento": "1",
+		"contaDv":"7",
+		"agenciaDv": "",
+		"descricaoDemonstrativo": [
+			{"linha1": "EDSON TESTE"},
+			{"linha2": "teste"},
+			{"linha3": ""},
+			{"linha4": ""},
+			{"linha5": ""}
+		],
+		"instrucoes": [
+			{"linha1": ""},
+			{"linha2": ""},
+			{"linha3": ""},
+			{"linha4": ""},
+			{"linha5": ""},
+			{"linha6": ""},
+			{"linha5": ""},
+			{"linha7": ""},
+			{"linha8": ""}
+		],
+		"aceite": "N"
+	}
+}
+
+OBS 2: Não esquecer da , (virgula) quando adicionar mais de uma estrutura
