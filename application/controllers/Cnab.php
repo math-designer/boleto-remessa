@@ -47,6 +47,7 @@ class Cnab extends CI_Controller {
 			$this->render_form();
 		} else {
 			$this->gerar_boleto_remessa($dados);
+			redirect('home');
 		}
 	}
 	

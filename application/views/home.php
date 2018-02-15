@@ -12,7 +12,7 @@
                 <?= form_open('boleto/remessa')?>
                     <div class="form-group">
                         <?= form_label('Json', 'jsonDados')?>
-                        <?= form_textarea(array('id'=>'jsonDados', 'name'=>'jsonDados', 'rows'=>'10', 'class'=>'form-control'), set_value('jsonDados')) ?>
+                        <?= form_textarea(array('id'=>'jsonDados', 'name'=>'jsonDados', 'rows'=>'10', 'class'=>'form-control')) ?>
                     </div>
                     <div class="form-group">
                         <?= form_submit('gerar', 'Gerar', array('class' => 'btn btn-primary'))?>
