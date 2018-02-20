@@ -46,14 +46,14 @@ class GerarRemessa
             'sacado_cidade' => $sacado->endereco->cidade,
             'sacado_uf' => $sacado->endereco->uf,
             'data_vencimento' => new \DateTime($boleto->dataVencimento),
-            'data_cadastro' => new \DateTime('2014-06-01'),
+            'data_cadastro' => new \DateTime($boleto->dataCadastro),
             'juros_de_um_dia' => 0.10, // Valor do juros de 1 dia'
-            'data_desconto' => new \DateTime('2014-06-01'),
+            'data_desconto' => new \DateTime($boleto->dataDesconto),
             'valor_desconto' => 10.0, // Valor do desconto
             'prazo' => 10, // prazo de dias para o cliente pagar após o vencimento
             'taxa_de_permanencia' => '0', //00 = Acata Comissão por Dia (recomendável), 51 Acata Condições de Cadastramento na CAIXA
             'mensagem' => 'Descrição do boleto',
-            'data_multa' => new \DateTime('2014-06-09'), // data da multa
+            'data_multa' => new \DateTime($boleto->dataMulta), // data da multa
             'valor_multa' => 10.0, // valor da multa
         ]);
 

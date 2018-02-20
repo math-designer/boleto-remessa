@@ -33,6 +33,9 @@ OBS: Dentro da tag 'boletos' adicionar a seguinte estrutura para cada boleto a s
 	},
 	"boleto": {
 		"dataVencimento": "01/12/2017",
+		"dataCadastro": "01/12/2017",
+		"dataDesconto": "01/12/2017",
+		"dataMulta": "01/12/2017",
 		"valor": "5.00",
 		"sequencial": "1",
 		"agencia": "0807",
