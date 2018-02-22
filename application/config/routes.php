@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['home']['get'] = 'Cnab/index';
 $route['boleto/remessa']['post'] = 'Cnab/gerar';
+$route['utilidades/estrutura-json-boleto']['get'] = 'Utils/estutura_boleto';
