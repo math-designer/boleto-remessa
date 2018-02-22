@@ -54,5 +54,9 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['home']['get'] = 'Cnab/index';
-$route['boleto/remessa']['post'] = 'Cnab/gerar';
+$route['boleto/remessa'] = 'Cnab/gerar';
 $route['utilidades/estrutura-json-boleto']['get'] = 'Utils/estutura_boleto';
+$route['utilidades/boletos/boletos-gerados']['get'] = 'Utils/boletos_gerados';
+$route['utilidades/boletos/baixar/(:any)']['get'] = 'Utils/baixar_arquivo/$1';
+$route['utilidades/boletos/apagar/(:any)']['get'] = 'Utils/apagar_arquivo/$1';
+$route['utilidades/boletos/apagar-tudo']['get'] = 'Utils/limpar_diretorio_boletos';

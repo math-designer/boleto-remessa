@@ -1,6 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+use JansenFelipe\Utils\Utils as Utils;
+
 class Cnab extends CI_Controller {
 
 	public function __construct()
@@ -39,15 +41,17 @@ class Cnab extends CI_Controller {
 
 	public function gerar()
 	{
+		if($this->input->method() == 'get') {
+			redirect(base_url('home'));
+		}
+
 		$this->form_validation->set_rules('jsonDados', 'Json', 'callback_validar_json');
 		$dados = json_decode($this->input->post('jsonDados'));
 		
 		if($this->form_validation->run() == FALSE) {
-			$this->session->set_flashdata('validation_errors', TRUE);
 			$this->render_form();
 		} else {
 			$this->gerar_boleto_remessa($dados);
-			redirect('home');
 		}
 	}
 	
@@ -68,15 +72,29 @@ class Cnab extends CI_Controller {
 	private function criar_zip($arquivos)
 	{
 		foreach ($arquivos as $key => $value) {
-			$sacado = trim($value['boleto']->getSacado()->getNome());
-            $id = date('dmYhis') . $key;
-            $boleto = $this->html2pdf_l->criar($value['boleto']->getOutput());
-            $remessa = $value['remessa']->getText();
-            
-            $this->zip->add_data("boleto({$sacado})-{$id}.pdf", $boleto);
-            $this->zip->add_data("remessa({$sacado})-{$id}.txt", $remessa);
+			$id = time();
+			$sacado = trim(str_replace(' ', '_', strtolower($value['boleto']->getSacado()->getNome())));
+            $boleto = array(
+            	'nome' => "{$id}_boleto_{$sacado}.pdf",
+            	'arquivo' => $this->html2pdf_l->criar($value['boleto']->getOutput())
+            );
+            $remessa = array(
+            	'nome' => "{$id}_remessa_{$sacado}.txt",
+            	'arquivo' => $value['remessa']->getText()
+            );
+
+            $this->zip->add_data($boleto['nome'], $boleto['arquivo']);
+            $this->zip->add_data($remessa['nome'], $remessa['arquivo']);
+
+            $this->salvar_arquivo($boleto['nome'], $boleto['arquivo']);
+            $this->salvar_arquivo($remessa['nome'], $remessa['arquivo']);
 		}
 		
-		$this->zip->download("boleto_remessa({$sacado})-{$id}.zip");
+		$this->zip->download("boletos-softvision.zip");
+	}
+
+	private function salvar_arquivo($nome, $arquivo)
+	{
+		write_file(APPPATH . '/storage/boletos/' . $nome, $arquivo);
 	}
 }
