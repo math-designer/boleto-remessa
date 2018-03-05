@@ -50,12 +50,12 @@ class GerarRemessa
             'data_cadastro' => \DateTime::createFromFormat('d/m/Y', $boleto->dataCadastro),
             'juros_de_um_dia' => 0.10, // Valor do juros de 1 dia'
             'data_desconto' => \DateTime::createFromFormat('d/m/Y', $boleto->dataDesconto),
-            'valor_desconto' => 10.0, // Valor do desconto
+            'valor_desconto' => 0, // Valor do desconto
             'prazo' => 10, // prazo de dias para o cliente pagar após o vencimento
             'taxa_de_permanencia' => '0', //00 = Acata Comissão por Dia (recomendável), 51 Acata Condições de Cadastramento na CAIXA
             'mensagem' => 'Descrição do boleto',
             'data_multa' => \DateTime::createFromFormat('d/m/Y', $boleto->dataMulta), // data da multa
-            'valor_multa' => 10.0, // valor da multa
+            'valor_multa' => 0, // valor da multa
         ]);
 
 
