@@ -7,9 +7,10 @@
                     <a class="list-group-item" href="http://json.parser.online.fr/beta/" target="_blank">Json parser (validar estrutura json)</a>
                     <a class="list-group-item" href="<?=base_url('utilidades/estrutura-json-boleto')?>" target="_blank">Estutura json boleto</a>
                     <a class="list-group-item" href="<?=base_url('utilidades/boletos/boletos-gerados')?>">Boletos gerados</a>
+                    <a class="list-group-item" href="<?=base_url('utilidades/logs')?>">Logs do sistema</a>
                 </ul>
             </div>
-        </div>       
+        </div>
         <div class="col-md-7">
             <div class="well">
                 <?php if(validation_errors()): ?>
@@ -30,5 +31,5 @@
                 <?= form_close() ?>
             </div>
         </div>
-    </div>    
+    </div>
 </div>

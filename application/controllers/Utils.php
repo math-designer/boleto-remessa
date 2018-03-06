@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 use Carbon\Carbon;
 
 class Utils extends CI_Controller {
-	
+
 	const BOLETOSPATH = APPPATH.'/storage/boletos/';
 
 	public function estutura_boleto()
@@ -21,13 +21,13 @@ class Utils extends CI_Controller {
 		$arquivos = array();
 		foreach ($arquivos_dir as $arquivo) {
 			$meta_data = stat(self::BOLETOSPATH.$arquivo);
-			
+
 			$arquivos[] = array(
 				'nome' => $arquivo, 
 				'data' => Carbon::createFromTimestamp($meta_data['mtime'])->format('d/m/Y H:i:s'),
 				'nome_link' => base64_encode($arquivo)
 			);
-			
+
 		}
 
 		$this->load->view('layout/header');

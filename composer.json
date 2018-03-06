@@ -15,6 +15,7 @@
 		"ext-mbstring": "*",
 	    "andersondanilo/cnab_php": "1.3.*",
 		"jansenfelipe/utils": "^2.0",
-		"nesbot/carbon": "^1.22"
+		"nesbot/carbon": "^1.22",
+		"seunmatt/codeigniter-log-viewer": "^1.0"
 	}
 }

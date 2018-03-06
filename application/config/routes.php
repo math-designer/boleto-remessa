@@ -60,3 +60,4 @@ $route['utilidades/boletos/boletos-gerados']['get'] = 'Utils/boletos_gerados';
 $route['utilidades/boletos/baixar/(:any)']['get'] = 'Utils/baixar_arquivo/$1';
 $route['utilidades/boletos/apagar/(:any)']['get'] = 'Utils/apagar_arquivo/$1';
 $route['utilidades/boletos/apagar-tudo']['get'] = 'Utils/limpar_diretorio_boletos';
+$route['utilidades/logs']['get']= "Logs/index";
