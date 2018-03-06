@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CodeIgniter log viewer</title>
+    <title>Logs</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
@@ -47,11 +47,10 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-            <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> CodeIgniter Log Viewer</h1>
-            <p class="text-muted"><i>by <a href="https://github.com/SeunMatt" target="_blank">Seun Matt</a></i></p>
+            <h1><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Logs do sistema</h1>
             <div class="list-group">
                 <?php if(empty($files)): ?>
-                    <a class="list-group-item liv-active">No Log Files Found</a>
+                    <a class="list-group-item liv-active">Nenhum arquivo de log encontrado</a>
                 <?php else: ?>
                     <?php foreach($files as $file): ?>
                         <a href="?f=<?= base64_encode($file); ?>"
@@ -65,15 +64,15 @@
         <div class="col-sm-9 col-md-10 table-container">
             <?php if(is_null($logs)): ?>
                 <div>
-                    Log file >50M, please download it.
+                    Arquivo > 50M, por favor baixe.
                 </div>
             <?php else: ?>
                 <table id="table-log" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Level</th>
-                        <th>Date</th>
-                        <th>Content</th>
+                        <th>Nível</th>
+                        <th>Data</th>
+                        <th>Conteúdo</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -111,14 +110,14 @@
                 <?php if($currentFile): ?>
                     <a href="?dl=<?= base64_encode($currentFile); ?>">
                         <span class="glyphicon glyphicon-download-alt"></span>
-                        Download file
+                        Baixar arquivo
                     </a>
                     -
                     <a id="delete-log" href="?del=<?= base64_encode($currentFile); ?>"><span
-                                class="glyphicon glyphicon-trash"></span> Delete file</a>
+                                class="glyphicon glyphicon-trash"></span> Apagar arquivo</a>
                     <?php if(count($files) > 1): ?>
                         -
-                        <a id="delete-all-log" href="?del=<?= base64_encode("all"); ?>"><span class="glyphicon glyphicon-trash"></span> Delete all files</a>
+                        <a id="delete-all-log" href="?del=<?= base64_encode("all"); ?>"><span class="glyphicon glyphicon-trash"></span> Apagar todos</a>
                     <?php endif; ?>
                 <?php endif; ?>
             </div>
@@ -137,6 +136,9 @@
         });
 
         $('#table-log').DataTable({
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Portuguese-Brasil.json"
+            },
             "order": [],
             "stateSave": true,
             "stateSaveCallback": function (settings, data) {
