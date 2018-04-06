@@ -29,7 +29,7 @@ class GerarRemessa
         ]);
 
 
-        $arquivo->insertDetalhe([
+        $_boleto = [
             'codigo_de_ocorrencia' => 1, // 1 = Entrada de título, futuramente poderemos ter uma constante
             'nosso_numero' => $boleto->sequencial,
             'numero_documento' => $boleto->numeroDocumento,
@@ -38,9 +38,6 @@ class GerarRemessa
             'valor' => $boleto->valor, // Valor do boleto
             'instrucao1' => "05", // 1 = Protestar com (Prazo) dias, 2 = Devolver após (Prazo) dias, futuramente poderemos ter uma constante
             'instrucao2' => "00", // preenchido com zeros
-            'sacado_nome' => $sacado->nome, // O Sacado é o cliente, preste atenção nos campos abaixo
-            'sacado_tipo' => $sacado->tipoInscricao == 1 ? 'cpf' : 'cnpj', //campo fixo, escreva 'cpf' (sim as letras cpf) se for pessoa fisica, cnpj se for pessoa juridica
-            'sacado_cpf' => $sacado->documento,
             'sacado_logradouro' => $sacado->endereco->logradouro,
             'sacado_bairro' => $sacado->endereco->bairro,
             'sacado_cep' => $sacado->endereco->cep, // sem hífem
@@ -56,7 +53,25 @@ class GerarRemessa
             'mensagem' => 'Descrição do boleto',
             'data_multa' => \DateTime::createFromFormat('d/m/Y', $boleto->dataMulta), // data da multa
             'valor_multa' => 0, // valor da multa
-        ]);
+        ];
+
+        if($boleto->tipoInscricao == 1) {
+            $dadosSacado = [
+                'sacado_nome' => $sacado->nome, // O Sacado é o cliente, preste atenção nos campos abaixo
+                'sacado_tipo' => 'cpf',
+                'sacado_cpf' => $sacado->documento
+            ];
+        } else {
+            $dadosSacado = [
+                'sacado_razao_social' => $sacado->nome, // O Sacado é o cliente, preste atenção nos campos abaixo
+                'sacado_tipo' => 'cnpj',
+                'sacado_cnpj' => $sacado->documento
+            ];
+        }
+
+        $_boleto = array_merge($_boleto, $dadosSacado);
+
+        $arquivo->insertDetalhe($_boleto);
 
 
         return $arquivo;

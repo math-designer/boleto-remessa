@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "33c19cd4c6ed8a703863ba3822123f2c",
+    "content-hash": "426429a3543d07df766881db88460685",
     "packages": [
         {
             "name": "andersondanilo/cnab_php",
-            "version": "1.3.17",
+            "version": "1.3.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersondanilo/CnabPHP.git",
-                "reference": "a3aaede6d0d5ead9fcc8c93cdfa73bb1d6130f39"
+                "reference": "65fbf9beda0d5d2b60a3b3363349e8a3f18731b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersondanilo/CnabPHP/zipball/a3aaede6d0d5ead9fcc8c93cdfa73bb1d6130f39",
-                "reference": "a3aaede6d0d5ead9fcc8c93cdfa73bb1d6130f39",
+                "url": "https://api.github.com/repos/andersondanilo/CnabPHP/zipball/65fbf9beda0d5d2b60a3b3363349e8a3f18731b0",
+                "reference": "65fbf9beda0d5d2b60a3b3363349e8a3f18731b0",
                 "shasum": ""
             },
             "require": {
@@ -53,20 +53,20 @@
                 "remessa",
                 "retorno"
             ],
-            "time": "2018-01-09T13:55:28+00:00"
+            "time": "2018-03-12T14:27:17+00:00"
         },
         {
             "name": "andersondanilo/cnab_yaml",
-            "version": "1.3.1",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersondanilo/cnab_yaml.git",
-                "reference": "7b38a9f30ac341a5d736e7e518e7bdec43db2aa0"
+                "reference": "17d7ea88fba92835c6cd5ffa66ff4ea8de0f91c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersondanilo/cnab_yaml/zipball/7b38a9f30ac341a5d736e7e518e7bdec43db2aa0",
-                "reference": "7b38a9f30ac341a5d736e7e518e7bdec43db2aa0",
+                "url": "https://api.github.com/repos/andersondanilo/cnab_yaml/zipball/17d7ea88fba92835c6cd5ffa66ff4ea8de0f91c0",
+                "reference": "17d7ea88fba92835c6cd5ffa66ff4ea8de0f91c0",
                 "shasum": ""
             },
             "type": "library",
@@ -81,7 +81,7 @@
                     "email": "wemerson.januario@gmail.com"
                 },
                 {
-                    "name": "Fernando Dutra Neres",
+                    "name": "Fernando Dutra neres",
                     "email": "fernando@inova2b.com.br"
                 },
                 {
@@ -100,7 +100,7 @@
                 "retorno",
                 "yaml"
             ],
-            "time": "2018-01-09T13:17:12+00:00"
+            "time": "2018-03-12T14:26:47+00:00"
         },
         {
             "name": "jansenfelipe/utils",
@@ -199,25 +199,25 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.22.1",
+            "version": "1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc"
+                "reference": "cbcf13da0b531767e39eb86e9687f5deba9857b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc",
-                "reference": "7cdf42c0b1cc763ab7e4c33c47a24e27c66bfccc",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cbcf13da0b531767e39eb86e9687f5deba9857b4",
+                "reference": "cbcf13da0b531767e39eb86e9687f5deba9857b4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0",
-                "symfony/translation": "~2.6 || ~3.0"
+                "php": ">=5.3.9",
+                "symfony/translation": "~2.6 || ~3.0 || ~4.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2",
-                "phpunit/phpunit": "~4.0 || ~5.0"
+                "phpunit/phpunit": "^4.8.35 || ^5.7"
             },
             "type": "library",
             "extra": {
@@ -248,7 +248,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2017-01-16T07:55:07+00:00"
+            "time": "2018-03-19T15:50:49+00:00"
         },
         {
             "name": "seunmatt/codeigniter-log-viewer",
@@ -352,16 +352,16 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.4.4",
+            "version": "v3.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "10b32cf0eae28b9b39fe26c456c42b19854c4b84"
+                "reference": "80e19eaf12cbb546ac40384e5c55c36306823e57"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/10b32cf0eae28b9b39fe26c456c42b19854c4b84",
-                "reference": "10b32cf0eae28b9b39fe26c456c42b19854c4b84",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/80e19eaf12cbb546ac40384e5c55c36306823e57",
+                "reference": "80e19eaf12cbb546ac40384e5c55c36306823e57",
                 "shasum": ""
             },
             "require": {
@@ -416,10 +416,80 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2018-01-18T22:16:57+00:00"
+            "time": "2018-02-22T06:28:18+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "symfony/var-dumper",
+            "version": "v3.4.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/var-dumper.git",
+                "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/6f502127b1bb85f7f30f8bc1fb60570a10431863",
+                "reference": "6f502127b1bb85f7f30f8bc1fb60570a10431863",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
+            },
+            "require-dev": {
+                "ext-iconv": "*",
+                "twig/twig": "~1.34|~2.4"
+            },
+            "suggest": {
+                "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
+                "ext-symfony_debug": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "Resources/functions/dump.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Component\\VarDumper\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony mechanism for exploring and dumping PHP variables",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "debug",
+                "dump"
+            ],
+            "time": "2018-04-03T05:22:50+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
